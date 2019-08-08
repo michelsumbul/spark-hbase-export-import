@@ -2,7 +2,7 @@ Spark job that export/import efficiently a hbase table. You can choose to compre
 
 The project has been developped because the native hbase mapreduce export/import job can be quiet slow on very big hbase table. Especially if the table has enable compression wit ha high % compression rate
 
-The code have been tested on HDP2.6.5 with Spark 2.3.1 and HBase 1.1.2
+The code have been tested on HDP3.1 with Spark 2.3.2 and HBase 2.0.2
 
 To run an export use the following command:
 Synthax: 

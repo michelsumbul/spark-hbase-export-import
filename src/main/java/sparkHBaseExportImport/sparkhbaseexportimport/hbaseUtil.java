@@ -21,6 +21,8 @@ import org.apache.hadoop.hbase.client.HBaseAdmin;
 /**
  *
  * @author msumbul
+ * @web https://whatsbigdata.be
+ * @git https://github.com/michelsumbul
  */
 public class hbaseUtil {
 
@@ -35,13 +37,15 @@ public class hbaseUtil {
 
     public static Admin getHbaseAdmin(Configuration config) {
         try {
-            HBaseAdmin.checkHBaseAvailable(config);
+            //HBaseAdmin.checkHBaseAvailable(config);
+            //For Hbase 1.1.2s
+            HBaseAdmin.available(config);
             Connection connection = ConnectionFactory.createConnection(config);
             Admin admin = connection.getAdmin();
             return admin;
         } catch (ZooKeeperConnectionException ex) {
             Logger.getLogger(hbaseUtil.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ServiceException | IOException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(hbaseUtil.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;

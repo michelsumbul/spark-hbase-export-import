@@ -5,7 +5,6 @@
  */
 package sparkHBaseExportImport.sparkhbaseexportimport;
 
-import java.util.Arrays;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Cell;
@@ -23,6 +22,8 @@ import org.apache.hadoop.io.compress.BZip2Codec;
 /**
  *
  * @author msumbul
+ * @web https://whatsbigdata.be
+ * @git https://github.com/michelsumbul
  */
 public class exportHbase {
 

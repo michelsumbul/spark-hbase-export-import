@@ -25,6 +25,8 @@ import scala.Tuple2;
 /**
  *
  * @author msumbul
+ * @web https://whatsbigdata.be
+ * @git https://github.com/michelsumbul
  */
 public class importHbase {
 
