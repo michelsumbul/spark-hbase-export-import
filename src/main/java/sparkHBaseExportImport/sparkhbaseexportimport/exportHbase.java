@@ -36,7 +36,7 @@ public class exportHbase {
         JavaSparkContext jsc = new JavaSparkContext(config);
 
         JavaPairRDD<ImmutableBytesWritable, Result> data = collectDataFromHBaseTable(jsc, tablename);
-        data.repartition(30);
+        
         JavaRDD<String> dataString = data.map(new Function<Tuple2<ImmutableBytesWritable, Result>, String>() {
 
             @Override
